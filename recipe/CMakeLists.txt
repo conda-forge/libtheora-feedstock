@@ -69,14 +69,14 @@ set(THEORA_SRC
    lib/rate.c
    lib/state.c
    lib/tokenize.c
-   lib/x86/mmxencfrag.c
-   lib/x86/mmxfdct.c
-   lib/x86/mmxfrag.c
-   lib/x86/mmxidct.c
-   lib/x86/mmxstate.c
-   lib/x86/sse2fdct.c
-   lib/x86/x86enc.c
-   lib/x86/x86state.c
+   lib/x86_vc/mmxencfrag.c
+   lib/x86_vc/mmxfdct.c
+   lib/x86_vc/mmxfrag.c
+   lib/x86_vc/mmxidct.c
+   lib/x86_vc/mmxstate.c
+   lib/x86_vc/sse2fdct.c
+   lib/x86_vc/x86enc.c
+   lib/x86_vc/x86state.c
 )
 
 add_library(THEORA SHARED
