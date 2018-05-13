@@ -74,7 +74,6 @@ set(THEORA_SRC
    lib/x86_vc/mmxfrag.c
    lib/x86_vc/mmxidct.c
    lib/x86_vc/mmxstate.c
-   lib/x86_vc/sse2fdct.c
    lib/x86_vc/x86enc.c
    lib/x86_vc/x86state.c
 )
