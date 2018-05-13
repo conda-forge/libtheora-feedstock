@@ -14,14 +14,16 @@ Summary: Theora is a free and open video compression format from the Xiph.org Fo
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libtheora-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libtheora-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libtheora-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libtheora-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libtheora-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libtheora-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libtheora-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libtheora-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libtheora/badges/version.svg)](https://anaconda.org/conda-forge/libtheora)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libtheora/badges/downloads.svg)](https://anaconda.org/conda-forge/libtheora)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libtheora-green.svg)](https://anaconda.org/conda-forge/libtheora) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libtheora.svg)](https://anaconda.org/conda-forge/libtheora) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libtheora.svg)](https://anaconda.org/conda-forge/libtheora) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libtheora.svg)](https://anaconda.org/conda-forge/libtheora) |
 
 Installing libtheora
 ====================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
