@@ -15,6 +15,7 @@ build:
 requirements:
   build:
     - pkg-config           # [unix]
+    - cmake                # [win]
     - {{ compiler("c") }}
 
   host:
