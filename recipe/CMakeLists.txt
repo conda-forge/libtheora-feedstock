@@ -47,7 +47,6 @@ set(THEORA_SRC
    lib/analyze.c
    lib/apiwrapper.c
    lib/bitpack.c
-   lib/collect.c
    lib/decapiwrapper.c
    lib/decinfo.c
    lib/decode.c
@@ -75,9 +74,8 @@ set(THEORA_SRC
    lib/x86/mmxfrag.c
    lib/x86/mmxidct.c
    lib/x86/mmxstate.c
-   lib/x86/sse2idct.c
-   lib/x86/x86cpu.c
-   lib/x86/x86enquant.c
+   lib/x86/sse2fdct.c
+   lib/x86/x86enc.c
    lib/x86/x86state.c
 )
 
