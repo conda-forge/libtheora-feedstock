@@ -10,25 +10,26 @@ source:
   sha256: b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc
 
 build:
-    number: 1001
-    skip: True  # [win]
+    number: 1002
+    skip: True  # [win and vc<14]
 
 requirements:
   build:
     - pkg-config
     - {{ compiler("c") }}
+    - cmake  # [win]
 
   host:
     - libogg 1.3.*
-    - libvorbis 1.3.*
-    - libpng >=1.6.23,<1.7
-    - zlib 1.2.*
+    - libvorbis 1.3.*  # [unix or osx]
+    - libpng >=1.6.23,<1.7  # [unix or osx]
+    - zlib 1.2.*  # [unix or osx]
 
   run:
     - libogg 1.3.*
-    - libvorbis 1.3.*
-    - libpng >=1.6.23,<1.7
-    - zlib 1.2.*
+    - libvorbis 1.3.*  # [unix or osx]
+    - libpng >=1.6.23,<1.7  # [unix or osx]
+    - zlib 1.2.*  # [unix or osx]
 
 test:
   commands:
@@ -42,6 +43,9 @@ test:
     - test -f ${PREFIX}/lib/lib{{ each_libtheora_lib }}.a                           # [unix]
     - test -f ${PREFIX}/lib/lib{{ each_libtheora_lib }}.dylib                       # [osx]
     - test -f ${PREFIX}/lib/lib{{ each_libtheora_lib }}.so                          # [linux]
+    - if exist %PREFIX%\\Library\\lib\\{{ each_libtheora_lib }}.lib (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\\Library\\include\\{{ each_libtheora_lib }}.h (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\\Library\\bin\\{{ each_libtheora_lib }}.dll (exit 0) else (exit 1)  # [win]
     {% endfor %}
 
 
