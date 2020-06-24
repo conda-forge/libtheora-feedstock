@@ -10,7 +10,7 @@ source:
   sha256: b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc
 
 build:
-  number: 1003
+  number: 1004
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('libtheora', max_pin='x.x') }}
