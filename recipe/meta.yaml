@@ -19,7 +19,11 @@ requirements:
   build:
     - pkg-config
     - {{ compiler("c") }}
-    - cmake  # [win]
+    - autoconf  # [unix]
+    - automake  # [unix]
+    - libtool   # [unix]
+    - make      # [unix]
+    - cmake     # [win]
 
   host:
     - libogg 1.3.*
