@@ -5,24 +5,15 @@ Home: https://theora.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libtheora-feedstock/blob/master/LICENSE.txt)
 
 Summary: Theora is a free and open video compression format from the Xiph.org Foundation.
-
-
 
 Current build status
 ====================
 
 
 <table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/libtheora-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/libtheora-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr><tr>
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/libtheora-feedstock">
@@ -71,6 +62,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=574&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libtheora-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=574&branchName=master">
@@ -99,6 +97,7 @@ Installing `libtheora` from the `conda-forge` channel can be achieved by adding 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `libtheora` can be installed with:
@@ -169,9 +168,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers

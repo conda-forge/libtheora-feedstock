@@ -16,5 +16,9 @@ fi
 
 ./configure --prefix=${PREFIX} --disable-examples --disable-spec
 make
-make check
+
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+    make check
+fi
+
 make install
