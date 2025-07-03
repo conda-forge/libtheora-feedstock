@@ -13,14 +13,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/libtheora-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/libtheora-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -206,7 +199,5 @@ Feedstock Maintainers
 
 * [@bgruening](https://github.com/bgruening/)
 * [@dschreij](https://github.com/dschreij/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@traversaro](https://github.com/traversaro/)
 
