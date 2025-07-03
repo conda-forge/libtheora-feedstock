@@ -57,6 +57,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - traversaro
     - bgruening
     - dschreij
     - traversaro
