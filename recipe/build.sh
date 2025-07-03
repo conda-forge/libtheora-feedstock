@@ -18,7 +18,7 @@ fi
 
 export CONFIGURE_ADDITIONAL_OPTIONS=""
 
-if [ "$target_platform" != "win-64" ]; then
+if [ "$target_platform" == "win-64" ]; then
   # GCC style assembly is not supported by clang on Windows, so let's disable it for now
   # if you really need the fastest possible libtheora on Windows, feel free to open an issue
   export CONFIGURE_ADDITIONAL_OPTIONS="$CONFIGURE_ADDITIONAL_OPTIONS --disable-asm"
