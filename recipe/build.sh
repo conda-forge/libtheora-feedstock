@@ -4,8 +4,10 @@ export C_INCLUDE_PATH=${PREFIX}/include
 export LDFLAGS="-L${PREFIX}/lib"
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 
-rm ./config.sub
-./autogen.sh
+if [ "$target_platform" != "win-64" ]; then
+  rm ./config.sub
+  ./autogen.sh
+fi
 
 # -fforce-addr is not supported in clang
 if [ `uname` == Darwin ]; then
