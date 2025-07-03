@@ -5,8 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: libtheora-{{ version }}.tar.bz2
-  url: http://downloads.xiph.org/releases/theora/libtheora-{{ version }}.tar.bz2
+  url: https://ftp.osuosl.org/pub/xiph/releases/theora/libtheora-{{ version }}.tar.gz
   sha256: b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc
 
 build:
