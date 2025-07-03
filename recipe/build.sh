@@ -22,3 +22,9 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
 fi
 
 make install
+
+# Delete static libraries (per CFEP-18)
+rm -rf $PREFIX/lib/libtheor*.a
+
+# Delete docs
+rm -rf $PREFIX/share/doc/libtheor*
