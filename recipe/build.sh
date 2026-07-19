@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export C_INCLUDE_PATH=${PREFIX}/include
-export LDFLAGS="-L${PREFIX}/lib"
+export LDFLAGS="$LDFLAGS -L${PREFIX}/lib"
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 
 if [ "$target_platform" != "win-64" ]; then
