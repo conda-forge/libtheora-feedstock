@@ -1,6 +1,7 @@
 #!/bin/bash
 
-printf 'target_platform=%q\n' "${target_platform:-}"
+target_platform="${target_platform:-${TARGET_PLATFORM:-}}"
+printf 'target_platform=%q\n' "$target_platform"
 set -x
 
 export C_INCLUDE_PATH=${PREFIX}/include
