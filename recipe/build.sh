@@ -1,5 +1,8 @@
 #!/bin/bash
 
+printf 'target_platform=%q\n' "${target_platform:-}"
+set -x
+
 export C_INCLUDE_PATH=${PREFIX}/include
 export LDFLAGS="$LDFLAGS -L${PREFIX}/lib"
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
