@@ -1,14 +1,12 @@
 #!/bin/bash
 
-target_platform="${target_platform:-${TARGET_PLATFORM:-}}"
-printf 'target_platform=%q\n' "$target_platform"
 set -x
 
 export C_INCLUDE_PATH=${PREFIX}/include
 export LDFLAGS="$LDFLAGS -L${PREFIX}/lib"
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 
-if [ "$target_platform" != "win-64" ]; then
+if [[ `uname` != MINGW* ]]; then
   rm ./config.sub
   ./autogen.sh
 fi
@@ -31,7 +29,7 @@ fi
 ./configure --prefix=${PREFIX} --disable-examples --disable-spec ${CONFIGURE_ADDITIONAL_OPTIONS}
 
 # As documented in https://github.com/conda-forge/autotools_clang_conda-feedstock/blob/cb241060f5d8adcd105f3b2e8454a8ad4d70f08f/recipe/meta.yaml#L58C1-L58C60
-[[ "$target_platform" == "win-64" ]] && patch_libtool
+[[ `uname` == MINGW* ]] && patch_libtool
 
 make
 
